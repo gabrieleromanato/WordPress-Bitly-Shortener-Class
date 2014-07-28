@@ -17,7 +17,7 @@ function bitly_shortener( $url ) {
 		if( $url == $original_link ) {
 			$short = $link;
 		} else {
-			$shortener = new BitlyShortener( $url );
+			$bitly = new BitlyShortener( $url );
 			$shortened_link = $bitly->shorten();
 			update_post_meta( $post_id, 'bitly-link', $shortened_link );
 			update_post_meta( $post_id, 'original-link', $url );
